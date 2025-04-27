@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch
+  workflow_dispatch: {}
 
 jobs:
   deploy:
@@ -29,4 +29,3 @@ jobs:
 
       - name: "Deploy to aws"
         run: pm2 start src/index.js
-        #nkjwndkncneknckwnc
