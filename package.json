@@ -1,0 +1,19 @@
+{
+  "name": "ec2-practise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VLD202/CI-CD-shopcart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VLD202/CI-CD-shopcart/issues"
+  },
+  "homepage": "https://github.com/VLD202/CI-CD-shopcart#readme",
+  "description": ""
+}
