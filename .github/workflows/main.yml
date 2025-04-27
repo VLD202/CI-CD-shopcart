@@ -1,0 +1,32 @@
+name: "deploy to aws"
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "setup node.js"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: "checkout code"
+        uses: actions/checkout@v4
+
+      - name: "Install dependencies"
+        run: npm install
+
+      - name: "Install pm2 globally"
+        run: npm install pm2 -g
+
+      - name: "Run the tests"
+        run: npm test
+
+      - name: "Deploy to aws"
+        run: pm2 start src/index.js
+        #nkjwndkncneknckwnc
