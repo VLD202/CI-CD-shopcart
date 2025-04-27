@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: "setup node.js"
         uses: actions/setup-node@v4
@@ -29,4 +29,3 @@ jobs:
 
       - name: "Deploy to aws"
         run: pm2 start src/index.js
-        #nkjwndkncneknckwnc
